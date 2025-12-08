@@ -69,7 +69,8 @@ A fully modular, enterprise-grade architecture supports:
 **Scenarios:** process automation, distributed reasoning, decision support, multi-department agent ecosystems.
 
 > **Diagram Placeholder:** Insert your customized architecture diagram here.
-![Alt Text](../diagrams/agentdeployment.drawio)
+![AI Agent Deployment Architecture](https://raw.githubusercontent.com/sethvinodtcs/Agent-Deployment/main/diagrams/agentdeployment.drawio)
+
 ## 8. Why Function Apps and Containers Co-Exist
 Both execution environments serve different roles:
 - **Function Apps (Serverless)** – Best for simple, low-latency, occasionally used agents.
