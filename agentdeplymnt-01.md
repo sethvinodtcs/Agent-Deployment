@@ -68,7 +68,6 @@ A fully modular, enterprise-grade architecture supports:
 
 **Scenarios:** process automation, distributed reasoning, decision support, multi-department agent ecosystems.
 
-> **Diagram Placeholder:** Insert your customized architecture diagram here.
 ![AI Agent Deployment Architecture](https://raw.githubusercontent.com/sethvinodtcs/Agent-Deployment/main/diagrams/agentdeployment.drawio.svg)
 
 ## 8. Why Function Apps and Containers Co-Exist
