@@ -90,5 +90,4 @@ The deployment of a simple agent follows a straightforward process:
 - As use cases grow, agents can evolve into **multi-agent systems**. Starting with simple agents ensures a **modular architecture** that can scale as the organization’s needs grow.
 
 ## Simple Agent Architecture Diagram
-![Simple Agent Deployment Architecture](https://raw.githubusercontent.com/sethvinodtcs/Agent-Deployment/main/diagrams/simple20agent.drawio.svg)
-
+![Simple Agent Deployment Architecture](https://raw.githubusercontent.com/sethvinodtcs/Agent-Deployment/main/diagrams/simpleagent.drawio.svg)
