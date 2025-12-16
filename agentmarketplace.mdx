@@ -8,24 +8,33 @@ The journey to build a **Generic Agent Marketplace** enables organizations from 
 
 ## The Journey to Build a Generic Agent Marketplace
 
-The architecture in the provided diagram outlines the **end-to-end** process of **developing**, **validating**, and **deploying AI agents** into a **generic marketplace**. This includes several key stages, from **code commit** by developers, through **agent validation**, to **marketplace deployment** and **runtime execution** across industries. Below, we break down this process into specific phases.
+The architecture in the provided diagram outlines the **end-to-end** process of **developing**, **validating**, and **deploying AI agents** into a **generic marketplace**. This includes several key stages, from **code commit** by developers, through **agent build**, **validation**, and **marketplace deployment**, to **runtime execution** across industries. Below, we break down this process into specific phases.
 
 ### Phase 1: Developer Collaboration and Code Commit
 
 - **ML Model Developer**: The journey starts with **ML developers** committing their **machine learning models** into a shared **code repository**. These models are intended to perform specific tasks, such as classification, prediction, optimization, or automation.
-  
+
 - **IAC Developer**: Alongside ML models, **Infrastructure as Code (IAC) developers** contribute to the setup of the infrastructure needed to run the agents. This includes defining the necessary **cloud resources**, **network configurations**, and **security policies** required to support the agent lifecycle.
 
-### Phase 2: Agent Build Pipeline and Infrastructure Validation
+---
 
-- **Static Code Analysis**: All code committed by both **ML model developers** and **IAC developers** undergoes **static code analysis** to ensure it adheres to security best practices and quality standards.
+### Phase 2: Agent Build Pipeline and ML Model Build
 
 - **Agent Build Pipeline**: 
-  - After passing static code analysis, the **agent build pipeline** builds containerized agent images and runs automated tests to validate the code. 
-  - A **security scan** is performed to ensure no vulnerabilities exist within the code or container images.
-  - The **build image** is then pushed to a central repository where it’s made available for further steps in the deployment process.
+  - After code is committed, the **Agent Build Pipeline** is triggered to build **agent images**. This includes the creation of **containerized agents**, which contain all necessary dependencies to run the agents efficiently in different environments.
+  - The **agent build process** also ensures that all agent configurations, including **network settings**, **firewall settings**, and **policy enforcement**, are properly integrated.
 
-- **Infrastructure Pipeline**: The **infrastructure pipeline** automates the process of validating and provisioning the infrastructure needed to support the agents. It ensures that all network, firewall, and security group (NSG) settings are appropriately configured, while validating the infrastructure against predefined policies.
+- **ML Model Build**: In parallel with the agent build, the **ML Model Build** process is responsible for validating the **AI model** and ensuring that it meets the requirements for the specific agent task. This can include tasks like:
+  - **Training the model** based on the dataset
+  - **Validating the model** to ensure it performs as expected
+  - **Packaging the model** into the appropriate container format
+  - **Pushing the model image** to a container registry for further deployment
+
+- **Static Code Analysis**: All code (both **ML models** and **agent code**) undergoes **static code analysis** to ensure it adheres to security best practices and quality standards.
+
+- **Security Scan**: The agent images are scanned for vulnerabilities during the build process to ensure compliance with **security** and **privacy standards**.
+
+---
 
 ### Phase 3: Marketplace and Agent Repository
 
@@ -38,6 +47,8 @@ The architecture in the provided diagram outlines the **end-to-end** process of 
 - **Catalog & Search Service**: The marketplace provides a **catalog and search service** that allows users to **browse, search, and filter** agents by various parameters, including **industry**, **use case**, **performance metrics**, and more. This makes it easier for businesses to find the right agents for their specific needs.
 
 - **Billing and License Service**: The marketplace includes **billing** and **license management** services that allow users to purchase, track, and manage their usage of agents. Flexible pricing models (pay-per-use, subscription, etc.) can be offered based on the agent’s functionality and market demand.
+
+---
 
 ### Phase 4: Agent Execution and Interoperability Layer (Runtime)
 
